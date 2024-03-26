@@ -3,8 +3,6 @@ package com.leetcode.exercise;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 public class ValidAnagram {
 
@@ -27,10 +25,11 @@ public class ValidAnagram {
 			countMap.put(character, countMap.getOrDefault(character, 0) - 1);
 		}
 		for (int value : countMap.values()) {
-			if (value != 0)
+			if (value != 0) {
 				return false;
+			}
 		}
-		return false;
+		return true;
 	}
 
 	public static void main(String[] args) {
